@@ -50,24 +50,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  // index
   .state('tab.shows', {
-      url: '/shows',
-      views: {
-        'tab-shows': {
-          templateUrl: 'templates/tab-shows.html',
-          controller: 'ChatsCtrl'
-        }
+    url: '/shows',
+    views: {
+      'tab-shows': {
+        templateUrl: 'templates/tab-shows.html',
+        controller: 'ShowsCtrl'
       }
-    })
-    .state('tab.show-detail', {
-      url: '/shows/:showId',
-      views: {
-        'tab-shows': {
-          templateUrl: 'templates/show-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
+    }
+  })
+
+  // show
+  .state('tab.show-detail', {
+    url: '/shows/:showId',
+    views: {
+      'tab-shows': {
+        templateUrl: 'templates/show-detail.html',
+        controller: 'ShowDetailCtrl'
       }
-    })
+    }
+  })
 
 
   // if none of the above states are matched, use this as the fallback
