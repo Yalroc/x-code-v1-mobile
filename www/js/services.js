@@ -6,6 +6,17 @@ angular.module('starter.services', [])
   // Some fake testing data
   var shows = [
     {
+      id: 0,
+      name: "Mon Show",
+      location: "Salle Grand Duc",
+      description: "Concert Yolo",
+      capacity: 200,
+      price: 10,
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Salle_Pleyel_5.jpg/220px-Salle_Pleyel_5.jpg",
+      date: "2016-10-30",
+      url: "https://api-shows-tonight.herokuapp.com/shows/1.json"
+    },
+    {
       id: 1,
       name: "Mon premier Show",
       location: "Salle Pleyel",
@@ -28,7 +39,7 @@ angular.module('starter.services', [])
       url: "https://api-shows-tonight.herokuapp.com/shows/2.json"
     },
     {
-      id: 5,
+      id: 3,
       name: "Bertrand",
       location: "Olympia Bruno Coquatrix",
       description: "Concert de guitare classique",
@@ -42,12 +53,12 @@ angular.module('starter.services', [])
 
   return {
     all: function() {
-      return chats;
+      return shows;
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(showId) {
+      for (var i = 0; i < shows.length; i++) {
+        if (shows[i].id === parseInt(showId)) {
+          return shows[i];
         }
       }
       return null;

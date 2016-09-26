@@ -8,11 +8,7 @@ angular.module('starter.controllers', [])
 
 .controller('ShowDetailCtrl', function($scope, $stateParams, Shows) {
   $scope.show = Shows.get($stateParams.showId);
-})
-
-
-
-
+});
 
 
 
